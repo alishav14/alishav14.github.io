@@ -1,106 +1,123 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 .navbar {
-  background-color: #d3d3d3;
-  /* Light gray color */
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: #ffffff;
+  /* Lighter grey */
+  padding: 20px 10px;
+  /* Increased padding for thickness */
+  font-family: 'Courier New', Courier, monospace;
+  text-align: right;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar a {
-  color: #333;
-  /* Darker color for text */
-  padding: 10px 20px;
+.nav-links {
+  display: inline-block;
+}
+
+body {
+  background-color: #cbf5f2;
+}
+
+.nav-links a {
+  color: black;
   text-decoration: none;
-  font-weight: bold;
-  font-family: "Courier New", monospace;
-  font-size: 18px;
+  margin: 0 15px;
+  font-size: 20px;
+  transition: all 0.3s ease;
   position: relative;
-  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  /* Retro shadow */
+  display: inline-block;
+  /* Ensure links are side by side */
 }
 
-.navbar a:before {
+.nav-links a:hover {
+  background: linear-gradient(to right, #799af5, #72f2ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #799af5, #72f2ca);
+  transition: width 0.3s;
+  margin: 0 auto;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Retro feel */
+.navbar {
+  border-bottom: 3px solid #4d31f1;
+}
+
+.nav-links a {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.nav-links a:hover {
+  font-style: normal;
+}
+
+
+.text::before {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -5px;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(to right, #ff9a9e, #fad0c4, #fad0c4);
-  transition: width 0.3s;
-}
-
-.navbar a:hover:before {
   width: 100%;
-}
-
-.navbar a:hover {
-  color: #ff6b6b;
-  transform: translateY(-5px);
-  /* Lifts the text up */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  /* Adds a shadow to enhance the lift effect */
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
-  /* Enhances the retro feel */
-}
-
-.navbar a:active {
-  transform: translateY(-3px);
-  /* Slightly lowers the lift when clicked */
-}
-
-.navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Pacifico", cursive;
-  color: #ff6b6b;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-  /* Retro shadow for the logo */
-}
-
-section.text {
-  position: absolute;
-  width: 100%;
-  min-width: 800px;
+  height: 100%;
+  background: url('/images/girl.png') no-repeat center;
+  opacity: 0.5;
+  z-index: -1;
   text-align: center;
-  top: 40%;
-  /* Reduced from 50% to 40% to bring the text closer to the navbar */
-  margin-top: -55px;
+  margin-top: 4%;
+  top: 0%;
+  background-position: top;
+  background-size: 100%;
 }
 
-h1,
-h3 {
+.text {
+  text-align: center;
+  padding-top: 20%;
+  margin-bottom: 20px;
+  /* Add margin to create space below the text */
+}
+
+.first-break {
+  /*background-color: #ffffff; */
+  /* Regular white background */
+  padding: 20px;
+  font-size: 19px;
+  position: relative;
+  z-index: 0;
+  margin-top: 20%;
+}
+
+
+
+.main1,
+.main2 {
   transform: matrix(1, -0.20, 0, 1, 0, 0);
   -ms-transform: matrix(1, -0.20, 0, 1, 0, 0);
   -webkit-transform: matrix(1, -0.20, 0, 1, 0, 0);
   transition: transform 0.3s, text-shadow 0.3s;
 }
 
-h1 {
+.main2 {
   font-family: "Oswald", Sans-serif;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 70px;
-  text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
+  font-size: 60px;
+  text-shadow: 4px 5px #f9f9f9, 6px 7px #c6a39a;
 }
 
-h1:hover {
-  transform: matrix(1.05, -0.20, 0, 1.05, 0, -5);
-  /* Slightly enlarges the text and maintains the slant */
-  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3), 0 0 15px #fad0c4;
-  /* Adds a more intense retro shadow with an ombre glow */
-}
-
-h1 span {
+.main2 span {
   display: inline-block;
   vertical-align: middle;
 }
@@ -109,38 +126,94 @@ span.star {
   font-size: 20px;
 }
 
-h3 {
+.main1 {
   font-family: "Open Sans", Sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.1em;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   position: relative;
   transition: transform 0.3s, text-shadow 0.3s;
 }
 
-h3:hover {
-  transform: matrix(1.05, -0.20, 0, 1.05, 0, -5);
-  /* Slightly enlarges the text and maintains the slant */
-  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3), 0 0 15px #fad0c4;
-  /* Adds a more intense retro shadow with an ombre glow */
+
+@keyframes highlight {
+  0% {
+    background-position: -100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
 }
 
-h3:before,
-h3:after {
-  content: " ";
-  position: absolute;
-  width: 100px;
-  height: 4px;
-  border-top: 2px solid #121212;
-  border-bottom: 2px solid #121212;
+.main1 {
+  font-family: "Open Sans", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 0px;
+  position: relative;
+  transition: transform 0.3s, text-shadow 0.3s;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 50%, transparent 50%);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: highlight 2s ease forwards;
 }
 
-h3:before {
-  margin: 5px 0 0 -110px;
+.first-info {
+  font-size: 19px;
+  background-color: ;
 }
 
-h3:after {
-  margin: 5px 0 0 10px;
+
+.first-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.info-text {
+  margin-right: 20px;
+}
+
+.info-image img {
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.changing-text {
+  font-weight: bold;
+  font-style: italic;
+  animation: changeText 2s infinite;
+}
+
+@keyframes changeText {
+
+  0%,
+  25% {
+    content: 'coder';
+  }
+
+  25%,
+  50% {
+    content: 'philanthropist';
+  }
+
+  50%,
+  75% {
+    content: 'founder';
+  }
+
+  75%,
+  100% {
+    content: 'coder';
+  }
 }
