@@ -1,3 +1,146 @@
-p {
-  color: red;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #d3d3d3;
+  /* Light gray color */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: #333;
+  /* Darker color for text */
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  /* Retro shadow */
+}
+
+.navbar a:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4, #fad0c4);
+  transition: width 0.3s;
+}
+
+.navbar a:hover:before {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: #ff6b6b;
+  transform: translateY(-5px);
+  /* Lifts the text up */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Adds a shadow to enhance the lift effect */
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+  /* Enhances the retro feel */
+}
+
+.navbar a:active {
+  transform: translateY(-3px);
+  /* Slightly lowers the lift when clicked */
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Pacifico", cursive;
+  color: #ff6b6b;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+  /* Retro shadow for the logo */
+}
+
+section.text {
+  position: absolute;
+  width: 100%;
+  min-width: 800px;
+  text-align: center;
+  top: 40%;
+  /* Reduced from 50% to 40% to bring the text closer to the navbar */
+  margin-top: -55px;
+}
+
+h1,
+h3 {
+  transform: matrix(1, -0.20, 0, 1, 0, 0);
+  -ms-transform: matrix(1, -0.20, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, -0.20, 0, 1, 0, 0);
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+
+h1 {
+  font-family: "Oswald", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 70px;
+  text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
+}
+
+h1:hover {
+  transform: matrix(1.05, -0.20, 0, 1.05, 0, -5);
+  /* Slightly enlarges the text and maintains the slant */
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3), 0 0 15px #fad0c4;
+  /* Adds a more intense retro shadow with an ombre glow */
+}
+
+h1 span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+span.star {
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Open Sans", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  position: relative;
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+
+h3:hover {
+  transform: matrix(1.05, -0.20, 0, 1.05, 0, -5);
+  /* Slightly enlarges the text and maintains the slant */
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3), 0 0 15px #fad0c4;
+  /* Adds a more intense retro shadow with an ombre glow */
+}
+
+h3:before,
+h3:after {
+  content: " ";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  border-top: 2px solid #121212;
+  border-bottom: 2px solid #121212;
+}
+
+h3:before {
+  margin: 5px 0 0 -110px;
+}
+
+h3:after {
+  margin: 5px 0 0 10px;
 }
