@@ -128,10 +128,10 @@ body {
 /* Timeline content styling */
 /* Timeline content styling */
 .timeline-content {
-  display: block; /* Changed from 'none' to 'block' */
+  display: block;
+  /* Changed from 'none' to 'block' */
   margin-top: 20px;
 }
-
 
 .timeline-event:hover .timeline-content {
   display: block;
