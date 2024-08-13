@@ -126,10 +126,12 @@ body {
 }
 
 /* Timeline content styling */
+/* Timeline content styling */
 .timeline-content {
-  display: none;
+  display: block; /* Changed from 'none' to 'block' */
   margin-top: 20px;
 }
+
 
 .timeline-event:hover .timeline-content {
   display: block;
