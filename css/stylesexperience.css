@@ -1,21 +1,19 @@
-/* Styling the navbar */
+/* Navbar styling */
 .navbar {
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   background-color: #ffffff;
-  /* Lighter grey */
   padding: 20px 10px;
   font-family: 'Courier New', Courier, monospace;
   text-align: right;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  /* Ensure the navbar stays on top */
   border-bottom: 3px solid #4d31f1;
 }
 
-/* Navbar links */
+/* Links styling */
 .nav-links {
   display: inline-block;
 }
@@ -56,47 +54,81 @@
 /* Body styling */
 body {
   font-family: 'Courier New', Courier, monospace;
-  background-color: #d6f0f9;
+  background-color: #f0f8ff;
   color: #333;
+  padding-top: 80px;
+  /* Added padding to prevent content overlap with navbar */
+}
+
+/* Experience container styling */
+.experience-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  width: 90%;
+}
+
+/* Experience column styling */
+.experience-column {
+  width: 30%;
+}
+
+.experience-column h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #fa69ff, #4d31f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 /* Timeline styling */
 .timeline {
-  width: 60%;
-  margin: 100px auto 50px auto;
-  /* Added margin at the top to create space below the navbar */
-  position: relative;
+  padding: 20px 0;
 }
 
+/* Timeline event styling */
 .timeline-event {
   background: #ffffff;
-  border-left: 8px solid #ff69b4;
+  border: 2px solid #fa69ff;
   margin: 20px 0;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-event:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-event h2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: #333;
   background: linear-gradient(45deg, #ff69b4, #ff6a00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
-  margin: 0;
+  margin: 0 0 10px 0;
   padding-bottom: 10px;
+  border-bottom: 2px solid #fa69ff;
 }
 
 .timeline-event .date {
-  font-size: 1em;
+  font-size: 1.1em;
   color: #555;
+  display: block;
+  margin-top: 5px;
+  font-style: italic;
 }
 
+/* Timeline content styling */
 .timeline-content {
   display: none;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .timeline-event:hover .timeline-content {
@@ -104,16 +136,11 @@ body {
   animation: fadeIn 0.5s ease;
 }
 
-/* Keep content open when clicked */
 .timeline-content.open {
   display: block;
 }
 
-.timeline-event:hover h2 {
-  transform: rotate(-2deg);
-  color: linear-gradient(45deg, #ff6a00, #69adff);
-}
-
+/* List styling */
 .timeline-event ul {
   list-style: none;
   padding: 0;
@@ -121,27 +148,9 @@ body {
 }
 
 .timeline-event ul li {
-  background: #ff69b4;
+  background: #c65fbe;
   color: #fff;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 3px;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.timeline-event ul li:hover {
-  opacity: 1;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 5px;
 }

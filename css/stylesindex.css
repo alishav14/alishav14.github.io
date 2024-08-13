@@ -165,6 +165,8 @@ span.star {
   padding-top: 6%;
   padding-right: 15%;
   padding-bottom: 6%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Drop shadow border */
+
 }
 
 .heroheadinggradient {
