@@ -1,17 +1,18 @@
 /* Styling the navbar */
+body {
+  background-color: #e5f7f8;
+}
 .navbar {
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   background-color: #ffffff;
-  /* Lighter grey */
   padding: 20px 10px;
   font-family: 'Courier New', Courier, monospace;
   text-align: right;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  /* Ensure the navbar stays on top */
   border-bottom: 3px solid #4d31f1;
 }
 
@@ -51,4 +52,61 @@
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+/* Projects page styling */
+.projects-container {
+  text-align: center;
+  margin-top: 75px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+}
+
+.projects-container h1 {
+  font-size: 2.5em;
+  background: linear-gradient(to right, #c099f0, #ca3374);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+.project {
+  background: #ffffff;
+  border: 2px solid #fa69ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 20px auto;
+  max-width: 80%;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #ff69b4, #f3dac9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-details {
+  font-size: 1.1em;
+  color: #333;
+  margin-top: 10px;
+}
+
+.highlight {
+  background: linear-gradient(to right, #ff69b4, #5d3cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
