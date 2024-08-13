@@ -99,9 +99,6 @@ body {
   margin-top: 20%;
 }
 
-
-
-.main1,
 .main2 {
   transform: matrix(1, -0.20, 0, 1, 0, 0);
   -ms-transform: matrix(1, -0.20, 0, 1, 0, 0);
@@ -126,18 +123,6 @@ span.star {
   font-size: 20px;
 }
 
-.main1 {
-  font-family: "Open Sans", Sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 0.1em;
-  margin-bottom: 0px;
-  position: relative;
-  transition: transform 0.3s, text-shadow 0.3s;
-}
-
-
 @keyframes highlight {
   0% {
     background-position: -100%;
@@ -147,28 +132,6 @@ span.star {
     background-position: 0%;
   }
 }
-
-.main1 {
-  font-family: "Open Sans", Sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 0.1em;
-  margin-bottom: 0px;
-  position: relative;
-  transition: transform 0.3s, text-shadow 0.3s;
-  background: linear-gradient(90deg, rgb(0, 0, 0) 50%, transparent 50%);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: highlight 2s ease forwards;
-}
-
-.first-info {
-  font-size: 19px;
-  background-color: ;
-}
-
 
 .first-info {
   display: flex;
@@ -189,31 +152,40 @@ span.star {
   border-radius: 50%;
 }
 
-.changing-text {
+.heroheading,
+.heroheadinggradient {
+  font-size: 80px;
+  font-family: Mark Pro, sans-serif;
   font-weight: bold;
-  font-style: italic;
-  animation: changeText 2s infinite;
+
 }
 
-@keyframes changeText {
+.heroheading {
+  padding-left: 11%;
+  padding-top: 6%;
+  padding-right: 15%;
+  padding-bottom: 6%;
+}
 
-  0%,
-  25% {
-    content: 'coder';
+.heroheadinggradient {
+  background: linear-gradient(270deg, #59e9a3, #2841af, #a43ce9);
+  /* Define the gradient colors */
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
 
-  25%,
   50% {
-    content: 'philanthropist';
+    background-position: 100% 50%;
   }
 
-  50%,
-  75% {
-    content: 'founder';
-  }
-
-  75%,
   100% {
-    content: 'coder';
+    background-position: 0% 50%;
   }
 }

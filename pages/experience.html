@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/stylesexperience.css">
   <title>Experience</title>
+
+
+
 </head>
 
 <body>
@@ -20,11 +23,40 @@
         <a href="contact.html">Contact</a>
       </div>
     </div>
-    <section class="text">
-      <h3>Experience</h3>
-      <p>List your professional and academic experiences here, such as internships, jobs, and projects.</p>
-    </section>
   </div>
+
+  <div class="timeline">
+    <div class="timeline-event">
+      <h2 class="clickable">Verizon - AI & Data Engineering Intern <span class="date">2024</span></h2>
+      <div class="timeline-content">
+        <ul>
+          <li>Developed predictive models for customer retention.</li>
+          <li>Collaborated with data scientists to analyze large datasets.</li>
+          <li>Enhanced data pipelines for better efficiency.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <h2 class="clickable">new - AI & Data Engineering Intern <span class="date">2024</span></h2>
+      <div class="timeline-content">
+        <ul>
+          <li>new Developed predictive models for customer retention.</li>
+          <li>new ollaborated with data scientists to analyze large datasets.</li>
+          <li>new Enhanced data pipelines for better efficiency.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Add more timeline events as needed -->
+  </div>
+
+  <script>
+    document.querySelectorAll('.clickable').forEach(item => {
+      item.addEventListener('click', function () {
+        const content = this.nextElementSibling;
+        content.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 
 </html>
